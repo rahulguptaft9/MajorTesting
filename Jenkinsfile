@@ -14,6 +14,16 @@ pipeline {
 		git 'https://github.com/rahulguptaft9/MajorTesting'
 		}	
 	}
+	stage('Build'){
+		steps{
+		sh 'npm install'
+		}
+	}
+	stage('Test'){
+		steps{
+		sh 'npm test'
+		}	
+	}
 	
 	stage('Building image') {
 		steps{
