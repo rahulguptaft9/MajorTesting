@@ -17,8 +17,8 @@
     "sinon": "^7.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "mocha --timeout 10000",
     "eject": "react-scripts eject"
   },
