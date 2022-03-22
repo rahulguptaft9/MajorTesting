@@ -14,22 +14,26 @@ pipeline {
 		git 'https://github.com/rahulguptaft9/MajorTesting'
 		}	
 	}
-	stage('Build'){
+	/*stage('Build'){
 		steps{
 		sh 'npm cache clean -force'
 		sh 'npm install'
 		}
-	}
+	}*/
 	stage('Test'){
-		steps{
+		steps{	
+		script{	
 		sh 'npm test'
 		}
+		step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])	
+		}
 	}
-	stage('Code Coverage'){
+	
+	/*stage('Code Coverage'){
 		steps{
 		sh 'npm run test-coverage'
 		}	
-	}
+	}*/
 	
 	/*stage('Building image') {
 		steps{
