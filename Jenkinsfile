@@ -19,9 +19,9 @@ pipeline {
 		sh 'npm install'
 		}
 	}
-	stage('Test'){
+	stage('Code Coverage'){
 		steps{
-		sh 'npm test'
+		sh 'npm run test-coverage'
 		}	
 	}
 	
