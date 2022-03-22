@@ -21,7 +21,7 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "mocha --timeout 10000",
     "eject": "react-scripts eject",
-    "test-coverage": "npm run test -- --coverage --coverageDirectory=output/coverage/jest --watchAll=false"
+    "test-coverage": "npm run test -- --coverage --watchAll=false"
   },
   "jest":{
     "transform":{
