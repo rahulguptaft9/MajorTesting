@@ -31,7 +31,7 @@
     "text",
     "cobertura" 
     ]
-  }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
