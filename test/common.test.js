@@ -6,7 +6,7 @@ chai.use(chaiHttp);
 describe('Testing my get Api', () => {
     it('should be return status 200', function(done){
         chai
-            .request('https://ngmusicdb.herokuapp.com/api/getMusic')
+            .request('https://github.com/rahulguptaft9/MajorTesting')
             .get('/')
             .then(function(res){
                 expect(res).to.have.status(200);
