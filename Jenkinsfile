@@ -20,13 +20,18 @@ pipeline {
 		sh 'npm install'
 		}
 	}
+	stage('Test'){
+		steps{
+		sh 'npm test'
+		}
+	}
 	stage('Code Coverage'){
 		steps{
 		sh 'npm run test-coverage'
 		}	
 	}
 	
-	stage('Building image') {
+	/*stage('Building image') {
 		steps{
 			script{
 			 	dockerImage=docker.build registry	
@@ -41,7 +46,7 @@ pipeline {
 				}
 			}
 		}
-	}
+	}*/
 	}
     
 }
