@@ -25,7 +25,7 @@ pipeline {
 		script{	
 		sh 'npm test'
 		}
-		step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])	
+		step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.js'])	
 		}
 	}
 	
