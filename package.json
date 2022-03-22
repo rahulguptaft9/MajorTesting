@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "test-coverage": "npm run test -- --coverage --coverageDirectory=output/coverage/jest --watchAll=false"
   },
-  "jest"{
+  "jest":{
     "transform":{
     "^.+\\.(js|jsx)$": "babel-jest" 
    },
