@@ -23,8 +23,10 @@ pipeline {
 	}
 	stage('coverage'){
 		steps{	
-		
+			script{
 		sh 'npm run test-cov'
+		}
+		step([$class: 'CoberturaPublisher', coberturaReportFile: 'output/coverage/jest/cobertura-coverage.xml'])	
 		}
 	}
 		
