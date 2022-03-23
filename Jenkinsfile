@@ -4,7 +4,7 @@ pipeline {
   tools {nodejs "node"}
 
 	environment{
-	registry="mrchelsea/react"
+	registry="mrchelsea/nthimage"
 	registryCredential='dockerhub'
 	dockerImage=''
 	}
@@ -54,7 +54,7 @@ pipeline {
 	
 
 	
-	/*stage('Building image') {
+	stage('Building image') {
 		steps{
 			script{
 			 	dockerImage=docker.build registry	
@@ -69,7 +69,7 @@ pipeline {
 				}
 			}
 		}
-	}*/
+	}
 	}
     
 }
