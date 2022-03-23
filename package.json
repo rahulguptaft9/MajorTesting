@@ -23,9 +23,6 @@
     "eject": "react-scripts eject",
     "test-coverage": "npm run test -- --coverage --watchAll=false",
     "sonar_coverage": "node sonarqube-scanner.js"
-    /*"node": "ts-node",
-    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "sonar": "ts-node sonar-scanner.ts"*/
   },
   "jest":{
     "transform":{
