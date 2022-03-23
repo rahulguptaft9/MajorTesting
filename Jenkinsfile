@@ -37,7 +37,8 @@ pipeline {
           scannerHome = tool 'sonar_coverage'
         }
 			withSonarQubeEnv('sonar_coverage'){
-				sh '${scannerHome}/bin/sonar-scanner'
+				sh '${scannerHome}/bin/linux-x86-64/'
+
 			}		
 		}
 	
