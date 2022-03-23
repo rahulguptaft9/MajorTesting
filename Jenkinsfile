@@ -14,12 +14,13 @@ pipeline {
 		git 'https://github.com/rahulguptaft9/MajorTesting'
 		}	
 	}
-	/*stage('Build'){
+	stage('Build'){
 		steps{
 		sh 'npm cache clean -force'
 		sh 'npm install'
+		sh 'npm install -g jest'
 		}
-	}*/
+	}
 	stage('coverage'){
 		steps{	
 		
