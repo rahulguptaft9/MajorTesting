@@ -22,7 +22,6 @@
     "test": "mocha --timeout 10000",
     "eject": "react-scripts eject",
     "test-cov": "jest --coverage --coverageDirectory=output/coverage/jest"
-    //"sonar_coverage": "node --openssl-legacy-provider sonarqube_scanner.js"
   },
   "jest": {
     "coverageReporters": [
