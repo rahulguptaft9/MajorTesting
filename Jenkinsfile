@@ -31,7 +31,9 @@ pipeline {
 	}
 		
 	stage('Sonarube'){
-	
+		tools{
+		jdk "jdk11"
+		}
 		steps{
 			        script {
           scannerHome = tool 'sonar_coverage';
