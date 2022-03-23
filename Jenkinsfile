@@ -22,12 +22,20 @@ pipeline {
 	}*/
 	stage('Test'){
 		steps{	
-		script{	
+		
 		sh 'npm test'
 		}
-		step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.js'])	
-		}
 	}
+		
+	stage('Sonarube'){
+	
+		steps{
+		withSonarQubeEnv('sonar_coverage')
+		sh 'npm install sonar-scanner'
+		sh 'npm run sonar'
+		}
+	
+	}	
 	
 	/*stage('Code Coverage'){
 		steps{
