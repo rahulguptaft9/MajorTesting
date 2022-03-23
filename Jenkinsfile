@@ -33,12 +33,11 @@ pipeline {
 	stage('Sonarube'){
 	
 		steps{
+			        script {
+          scannerHome = tool 'sonar_coverage'
+        }
 			withSonarQubeEnv('sonar_coverage'){
-				script{
-			
-		
-		sh 'npm run sonar'
-				}
+				sh '${scannerHome}/bin/sonar-scanner'
 			}		
 		}
 	
