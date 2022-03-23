@@ -14,14 +14,16 @@
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "sinon": "^7.3.2"
+    "sinon": "^7.3.2",
+    "sonarqube-scanner": "^2.8.1"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "mocha --timeout 10000",
     "eject": "react-scripts eject",
-    "test-cov": "jest --coverage --coverageDirectory=output/coverage/jest"
+    "test-cov": "jest --coverage --coverageDirectory=output/coverage/jest",
+    "sonar": "node sonar_coverage.js"
   },
   "jest": {
     "coverageReporters": [
