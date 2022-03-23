@@ -22,7 +22,7 @@
     "test": "mocha --timeout 10000",
     "eject": "react-scripts eject",
     "test-coverage": "npm run test -- --coverage --watchAll=false",
-    "sonar_coverage": "node sonarqube-scanner.js"
+    "sonar_coverage": "node --openssl-legacy-provider sonarqube-scanner.js"
   },
   "jest":{
     "transform":{
