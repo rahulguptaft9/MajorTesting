@@ -20,14 +20,14 @@ pipeline {
 		sh 'npm install'
 		}
 	}*/
-	/*stage('Test'){
+	stage('coverage'){
 		steps{	
 		
-		sh 'npm test'
+		sh 'npm run test-cov'
 		}
-	}*/
+	}
 		
-	stage('Sonarube'){
+	/*stage('Sonarube'){
 	
 		steps{
 			withSonarQubeEnv('sonar_coverage'){
@@ -39,7 +39,7 @@ pipeline {
 			}		
 		}
 	
-	}	
+	}*/	
 	
 	/*stage('Code Coverage'){
 		steps{
