@@ -31,8 +31,8 @@ pipeline {
 	
 		steps{
 			withSonarQubeEnv('sonar_coverage'){
-		/*sh 'npm install -g node'		
-		sh 'npm install sonar-scanner'*/
+		sh 'npm install -g node'		
+		/*sh 'npm install sonar-scanner'*/
 		sh 'npm run sonar'
 		}		
 		}
