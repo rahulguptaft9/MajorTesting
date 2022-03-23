@@ -21,16 +21,13 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "mocha --timeout 10000",
     "eject": "react-scripts eject",
-    "test-coverage": "npm run test -- --coverage --watchAll=false",
-    "sonar_coverage": "node --openssl-legacy-provider sonarqube_scanner.js"
+    "test-cov": "jest --coverage --coverageDirectory=output/coverage/jest",
+    //"sonar_coverage": "node --openssl-legacy-provider sonarqube_scanner.js"
   },
-  "jest":{
-    "transform":{
-    "^.+\\.(js|jsx)$": "babel-jest" 
-   },
-    "coverageReporters":[
-    "text",
-    "cobertura" 
+  "jest": {
+    "coverageReporters": [
+      "text",
+      "cobertura"
     ]
   },
   "eslintConfig": {
