@@ -30,25 +30,21 @@ pipeline {
 		}
 	}
 		
-	/*stage('Sonarube'){
+	stage('Sonarube'){
 	
 		steps{
 			withSonarQubeEnv('sonar_coverage'){
 				script{
-		//sh 'npm install node'		
-		/*sh 'npm install sonar-scanner'*/
-		/*sh 'npm run sonar_coverage'
+			
+		
+		sh 'npm run sonar'
 				}
 			}		
 		}
 	
-	}*/	
+	}
 	
-	/*stage('Code Coverage'){
-		steps{
-		sh 'npm run test-coverage'
-		}	
-	}*/
+
 	
 	/*stage('Building image') {
 		steps{
