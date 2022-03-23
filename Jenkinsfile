@@ -34,7 +34,7 @@ pipeline {
 				script{
 		//sh 'npm install node'		
 		/*sh 'npm install sonar-scanner'*/
-		sh 'sonar_coverage'
+		sh 'npm sonar_coverage'
 				}
 			}		
 		}
