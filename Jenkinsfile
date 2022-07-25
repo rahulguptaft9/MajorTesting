@@ -11,7 +11,7 @@ pipeline {
 	stages{
 	stage('Git') {
 		steps{
-		git 'https://github.com/rahulguptaft9/MajorTesting'
+		git 'https://github.com/rahulguptaft9/JenkinsDemo'
 		}	
 	}
 	stage('Build'){
@@ -72,11 +72,11 @@ pipeline {
 		}
 	}
 		
-		stage('Image Scanning'){
+		/*stage('Image Scanning'){
 			steps{
 			sh 'trivy image registry'
 			}
-		}	
+		}*/
 	}
     
 }
