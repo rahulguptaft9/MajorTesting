@@ -16,22 +16,23 @@ pipeline {
 	}
 	stage('Build'){
 		steps{
-		sh 'npm cache clean -force'
-		sh 'npm install'
-		sh 'npm install -g jest'
-		sh 'npm run build'
+		//sh 'npm cache clean -force'
+		//sh 'npm install'
+		//sh 'npm install -g jest'
+		//sh 'npm run build'
+		echo "BUILD"
 		}
 	}
-	stage('Code Coverage'){
+	/*stage('Code Coverage'){
 		steps{	
 			script{
 		sh 'npm run test-cov'
 		}
 		step([$class: 'CoberturaPublisher', coberturaReportFile: 'output/coverage/jest/cobertura-coverage.xml'])	
 		}
-	}
+	}*/
 		
-	stage('SonarQube'){
+	/*stage('SonarQube'){
 		tools{
 		jdk "jdk11"
 		}
@@ -51,7 +52,7 @@ pipeline {
 		}		
 		}
 	
-	}
+	}*/
 	
 
 	
@@ -71,6 +72,12 @@ pipeline {
 			}
 		}
 	}
+		
+		stage('Image Scanning'){
+			steps{
+			sh 'trivy image registry'
+			}
+		}	
 	}
     
 }
