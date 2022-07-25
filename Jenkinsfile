@@ -32,7 +32,7 @@ pipeline {
 		}
 	}
 		
-	/*stage('SonarQube'){
+	stage('SonarQube'){
 		tools{
 		jdk "jdk11"
 		}
@@ -43,17 +43,16 @@ pipeline {
 		withSonarQubeEnv('sonar_coverage'){
 		sh '''
 		/var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonar_coverage/bin/sonar-scanner \
-		-Dsonar.host.url=http://192.168.122.138:9004/sonarqube \
-		-Dsonar.login=443b17ef84fc21dfd66dba03fc8fe3299edae9de \
-		-Dsonar.projectKey=aishwarya \
-		-Dsonar.projectName=aishwarya					
+		-Dsonar.host.url=http://192.168.122.150:9004/sonarqube \
+		-Dsonar.login=fdc363de15b913b7217886da6921ab013db5c56a \
+		-Dsonar.projectKey=MERN \
+		-Dsonar.projectName=MERN					
 		'''
 
 		}		
 		}
 	
-	}*/
-	
+	}
 
 	
 	stage('Building Image') {
